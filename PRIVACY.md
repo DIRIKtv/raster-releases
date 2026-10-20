@@ -15,7 +15,6 @@ Raster keeps these in its own private storage on the TV, and doesn't send them t
 - favourites, reminders, channel edits, watch history and settings
 - recordings, and the short live-TV buffer used for pause and rewind
 - crash reports (see below)
-- your Raster Premium license key, if you have one
 
 Android's own backup and device-to-device transfer are turned off for Raster, so none of this
 goes to Google or Amazon backups. To move your setup, use **Settings › Backup & Restore**. A
@@ -29,11 +28,6 @@ backup file contains your provider logins, so keep it private.
 - **GitHub, for updates.** When it checks for updates, Raster asks GitHub
   (api.github.com and github.com) for the latest release and downloads it from there. GitHub sees
   your IP address. You can turn the check off in **Settings › Updates**.
-- **Dodo Payments, for Raster Premium.** Raster Premium is sold through Dodo Payments, which handles
-  the purchase and your payment details; Raster never sees them. When you enter a license key,
-  Raster sends the key and a device name (for example "Raster on Amazon AFTKA") to Dodo Payments
-  to activate it. Every few days it sends the key again to check it's still valid. Dodo Payments'
-  privacy policy applies to your purchase.
 
 ## The phone page
 
@@ -57,8 +51,7 @@ Raster doesn't collect personal information from anyone, including children. Par
 
 ## Deleting your data
 
-Uninstalling Raster deletes everything it stored on the TV. To free a Premium key for another TV,
-use **Settings › Raster Premium › Remove from This TV** first.
+Uninstalling Raster deletes everything it stored on the TV.
 
 ## Changes and contact
 
