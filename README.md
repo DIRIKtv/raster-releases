@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img alt="Version" src="https://img.shields.io/badge/version-0.4.0-F1EADD?style=flat-square&labelColor=1A1714">
+  <img alt="Version" src="https://img.shields.io/badge/version-0.4.1-F1EADD?style=flat-square&labelColor=1A1714">
   <img alt="Platform" src="https://img.shields.io/badge/Fire%20TV%20%7C%20Android%20TV-7.1%2B-F1EADD?style=flat-square&labelColor=1A1714">
   <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-2.3-F1EADD?style=flat-square&labelColor=1A1714&logo=kotlin&logoColor=F1EADD">
   <img alt="Compose for TV" src="https://img.shields.io/badge/Jetpack%20Compose-for%20TV-F1EADD?style=flat-square&labelColor=1A1714&logo=jetpackcompose&logoColor=F1EADD">
@@ -115,7 +115,7 @@ Most Fire TV devices need **`armeabi-v7a`** (32-bit apps, even on 64-bit hardwar
 
 ```sh
 adb connect <fire-tv-ip>:5555
-adb install -r raster-0.4.0-armeabi-v7a.apk
+adb install -r raster-0.4.1-armeabi-v7a.apk
 adb shell cmd package compile -m speed -f tv.raster.app   # recommended, see below
 ```
 
@@ -135,11 +135,11 @@ Updates come only over `https://`, and an APK is installed only when its SHA-256
 
   ```json
   {
-    "versionCode": 4,
-    "versionName": "0.4.0",
+    "versionCode": 5,
+    "versionName": "0.4.1",
     "notes": "What's new",
     "apks": {
-      "armeabi-v7a": { "url": "raster-0.4.0-armeabi-v7a.apk", "sha256": "…64 hex characters…" }
+      "armeabi-v7a": { "url": "raster-0.4.1-armeabi-v7a.apk", "sha256": "…64 hex characters…" }
     }
   }
   ```
