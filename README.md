@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img alt="Version" src="https://img.shields.io/badge/version-0.4.3-F1EADD?style=flat-square&labelColor=1A1714">
+  <img alt="Version" src="https://img.shields.io/badge/version-0.5.0-F1EADD?style=flat-square&labelColor=1A1714">
   <img alt="Platform" src="https://img.shields.io/badge/Fire%20TV%20%7C%20Android%20TV-7.1%2B-F1EADD?style=flat-square&labelColor=1A1714">
   <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-2.3-F1EADD?style=flat-square&labelColor=1A1714&logo=kotlin&logoColor=F1EADD">
   <img alt="Compose for TV" src="https://img.shields.io/badge/Jetpack%20Compose-for%20TV-F1EADD?style=flat-square&labelColor=1A1714&logo=jetpackcompose&logoColor=F1EADD">
@@ -36,11 +36,11 @@
 <table>
   <tr>
     <td width="50%"><img src="screenshots/player.jpg" alt="Player info card"><br><sub><b>Player.</b> OK opens the info card: rewind on the timeline, what's coming up, quick actions and history.</sub></td>
-    <td width="50%"><img src="screenshots/guide.jpg" alt="Guide"><br><sub><b>Guide.</b> The channel you're watching keeps playing in the header while you browse.</sub></td>
+    <td width="50%"><img src="screenshots/guide.jpg" alt="Guide"><br><sub><b>Guide.</b> A one-line header leaves room for more channels; new and live programmes are tagged.</sub></td>
   </tr>
   <tr>
     <td width="50%"><img src="screenshots/categories.jpg" alt="Categories"><br><sub><b>Categories.</b> ◀ at the start of the guide slides in your groups and favourites lists.</sub></td>
-    <td width="50%"><img src="screenshots/settings.jpg" alt="Settings"><br><sub><b>Settings.</b> Grouped into clear sections, every option a press or two away.</sub></td>
+    <td width="50%"><img src="screenshots/settings.jpg" alt="Settings"><br><sub><b>Settings.</b> Grouped into clear sections, with the niche options behind Advanced.</sub></td>
   </tr>
 </table>
 
@@ -52,11 +52,16 @@
 - Rewind timeline with a time bubble, programme boundaries and a one-press **Go Live**
 - Info card with episode details, **Coming Up**, Record, Favourite, Audio, Subtitles and Start Over
 - Recently watched channels, previous channel, number-key tuning, Multiview (2 or 4 at once)
-- "Up next" and "recording soon" pop-ups, sleep timer, automatic reconnect
+- Channel up/down previews what's on before tuning; "Up next" and "recording soon" pop-ups, sleep timer, automatic reconnect
+- Picture shapes (Fit, Stretch, Zoom, Force 16:9 / 4:3, Zoom 5%), subtitle timing while watching, Always Use VLC per channel
+- Picture-in-picture on TVs that have it; a paused picture dims after three minutes
 
 ### 🗓️ Guide
 - Time grid that keeps your place in time when moving between channels
-- Catch-up programmes highlighted with ↺, past programmes faded
+- Compact header for about twice the channels on screen; choose the time span, row height and channel column
+- NEW and LIVE tags and episode numbers from the guide; very short programmes run together
+- Type a channel number to jump to it; refreshes in the background, even with Raster closed
+- Catch-up programmes highlighted with ↺, past programmes faded (or hidden)
 - Reminders and recordings straight from the grid; ◀◀ ▶▶ move an hour at a time
 - Categories panel with favourites lists and provider groups
 
@@ -68,6 +73,11 @@
 - The card you're on described at the top, with the playing video beside it
 - Rows you choose and order yourself: Recent Channels, Continue Watching, favourites lists, recordings, recently added
 - Left at the start of any row jumps back to the top
+
+### 🎛️ Remote
+- Preview or instant channel changes, flip ▲ ▼, keep them in the category you picked from
+- Choose what Back does while watching, and give ◀◀ ▶▶ and the coloured buttons other jobs
+- Undo after hiding a channel or removing a favourite; "press Back again" before leaving
 
 ### ⏺️ Recording
 - Record now or schedule from the guide, to internal storage or USB
@@ -81,8 +91,11 @@
 
 ### 🎨 Personal
 - Raster theme with a cream accent, plus Cool Dark and Pure Black (for OLED)
-- Accent colours, sounds and motion each switchable
-- Rename, renumber or hide channels; favourites lists you can reorder
+- Any accent colour, focus style, channel card style (wide, square, strip), motion speed and corner roundness
+- Logo backgrounds that keep dark logos visible, a clock in the tab bar, and Evening Mode for the menus
+- Arrange the tab bar (hide, reorder, icons only) and the top of Home (large, small or off)
+- Rename, renumber, hide or sort channels, clean up their names; favourites lists you can reorder
+- A User-Agent for each provider, and an Advanced switch that keeps the niche settings out of the way
 - Parental PIN for groups, channels and Settings
 - In-app updates
 
@@ -115,7 +128,7 @@ Most Fire TV devices need **`armeabi-v7a`** (32-bit apps, even on 64-bit hardwar
 
 ```sh
 adb connect <fire-tv-ip>:5555
-adb install -r raster-0.4.3-armeabi-v7a.apk
+adb install -r raster-0.5.0-armeabi-v7a.apk
 adb shell cmd package compile -m speed -f tv.raster.app   # recommended, see below
 ```
 
@@ -135,11 +148,11 @@ Updates come only over `https://`, and an APK is installed only when its SHA-256
 
   ```json
   {
-    "versionCode": 7,
-    "versionName": "0.4.3",
+    "versionCode": 8,
+    "versionName": "0.5.0",
     "notes": "What's new",
     "apks": {
-      "armeabi-v7a": { "url": "raster-0.4.3-armeabi-v7a.apk", "sha256": "…64 hex characters…" }
+      "armeabi-v7a": { "url": "raster-0.5.0-armeabi-v7a.apk", "sha256": "…64 hex characters…" }
     }
   }
   ```
